@@ -4,8 +4,157 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>regular-sailfish</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
 </head>
-<body style="margin:0;display:flex;align-items:center;justify-content:center;height:100vh;font-family:system-ui,sans-serif;background:#fafafa;color:#00f">
-  <h1 style="font-size:3rem">Hello world</h1>
+<body>
+  <div class="page">
+    <header class="topbar">
+      <div class="brand">
+        <div class="brand__mark" aria-hidden="true">
+          <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="32" cy="32" r="28" stroke="currentColor" stroke-width="2"/>
+            <path d="M18 40c6-2 10-10 14-16 3-5 6-7 12-8-2 4-5 9-8 12 5-1 9 0 12 3-6 1-10 3-14 7-5 5-9 7-16 2z" fill="currentColor"/>
+            <path d="M16 44c8 4 16 2 24-3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <div class="brand__name">TITAN</div>
+      </div>
+
+      <nav class="nav" aria-label="Primary">
+        <a class="nav__link" href="#">Offerings</a>
+        <a class="nav__link" href="#">About</a>
+        <a class="nav__link" href="#">Blog</a>
+      </nav>
+
+      <div class="actions">
+        <a class="action__text" href="#">Log In</a>
+        <a class="btn btn--light" href="#">Join Titan</a>
+      </div>
+    </header>
+
+    <main class="shell">
+      <section class="hero">
+        <div class="hero__grid">
+          <div class="hero__left">
+            <h1 class="hero__title">The wealth advisor for<br/>high-stakes financial<br/>decisions</h1>
+
+            <div class="hero__cta">
+              <a class="btn btn--dark" href="#">Get started <span aria-hidden="true">→</span></a>
+              <a class="why" href="#">
+                <span class="why__text">See why</span>
+                <span class="why__icon" aria-hidden="true">▶</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="hero__right" aria-hidden="true">
+            <div class="art">
+              <svg viewBox="0 0 900 520" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Illustration">
+                <defs>
+                  <pattern id="dots" width="6" height="6" patternUnits="userSpaceOnUse">
+                    <circle cx="1" cy="1" r="0.9" fill="#0b0b0b" opacity="0.35"/>
+                  </pattern>
+                  <filter id="soft" x="-10%" y="-10%" width="120%" height="120%">
+                    <feGaussianBlur stdDeviation="0.3"/>
+                  </filter>
+                </defs>
+
+                <!-- bird -->
+                <path d="M215 128c22 8 45 2 61-10-12 19-26 31-46 39 16 2 28 8 40 18-22-4-41-3-58 8-12-15-7-37 3-55z" fill="#0b0b0b" opacity="0.9"/>
+                <path d="M243 118c-10 10-22 19-39 26" stroke="#0b0b0b" stroke-width="3" stroke-linecap="round"/>
+
+                <!-- skyline base line -->
+                <path d="M120 420H820" stroke="#0b0b0b" stroke-width="2"/>
+
+                <!-- left trees -->
+                <circle cx="210" cy="368" r="62" fill="url(#dots)" filter="url(#soft)"/>
+                <path d="M210 410c-8 18-12 38-14 55" stroke="#0b0b0b" stroke-width="3" stroke-linecap="round"/>
+                <path d="M210 412c12 14 18 29 20 53" stroke="#0b0b0b" stroke-width="3" stroke-linecap="round"/>
+
+                <!-- right trees -->
+                <circle cx="760" cy="375" r="55" fill="url(#dots)" filter="url(#soft)"/>
+                <path d="M760 412c-10 20-12 38-12 52" stroke="#0b0b0b" stroke-width="3" stroke-linecap="round"/>
+
+                <!-- buildings left cluster -->
+                <g fill="none" stroke="#0b0b0b" stroke-width="2">
+                  <rect x="260" y="240" width="90" height="180"/>
+                  <rect x="360" y="270" width="85" height="150"/>
+                  <rect x="455" y="250" width="95" height="170"/>
+                </g>
+                <g fill="#0b0b0b" opacity="0.25">
+                  <rect x="275" y="260" width="60" height="6"/>
+                  <rect x="275" y="280" width="60" height="6"/>
+                  <rect x="275" y="300" width="60" height="6"/>
+                  <rect x="375" y="290" width="55" height="6"/>
+                  <rect x="375" y="310" width="55" height="6"/>
+                  <rect x="470" y="275" width="65" height="6"/>
+                  <rect x="470" y="295" width="65" height="6"/>
+                  <rect x="470" y="315" width="65" height="6"/>
+                </g>
+
+                <!-- empire-like tower -->
+                <g>
+                  <path d="M590 160h32v30h18v20h-18v210h-32V210h-18v-20h18z" fill="none" stroke="#0b0b0b" stroke-width="2"/>
+                  <path d="M606 120l10 40h-20l10-40z" fill="#0b0b0b"/>
+                  <path d="M590 200h32" stroke="#0b0b0b" stroke-width="2"/>
+                  <path d="M590 230h32" stroke="#0b0b0b" stroke-width="2" opacity="0.6"/>
+                  <path d="M590 260h32" stroke="#0b0b0b" stroke-width="2" opacity="0.4"/>
+                </g>
+
+                <!-- right brownstone-ish block -->
+                <g>
+                  <path d="M650 230h140v190H650z" fill="none" stroke="#0b0b0b" stroke-width="2"/>
+                  <path d="M650 250h140" stroke="#0b0b0b" stroke-width="2"/>
+                  <path d="M665 265h110v22H665z" fill="none" stroke="#0b0b0b" stroke-width="2"/>
+                  <path d="M665 300h110v22H665z" fill="none" stroke="#0b0b0b" stroke-width="2"/>
+                  <path d="M665 335h110v22H665z" fill="none" stroke="#0b0b0b" stroke-width="2"/>
+                  <path d="M670 390h46v30h-46z" fill="none" stroke="#0b0b0b" stroke-width="2"/>
+                  <path d="M728 390h52v30h-52z" fill="none" stroke="#0b0b0b" stroke-width="2"/>
+                  <path d="M715 230v190" stroke="#0b0b0b" stroke-width="2" opacity="0.4"/>
+                </g>
+
+                <!-- street perspective lines -->
+                <path d="M520 420l120-120" stroke="#0b0b0b" stroke-width="2" opacity="0.45"/>
+                <path d="M540 420l140-140" stroke="#0b0b0b" stroke-width="2" opacity="0.25"/>
+                <path d="M560 420l160-160" stroke="#0b0b0b" stroke-width="2" opacity="0.15"/>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="lower">
+        <div class="lower__grid">
+          <div class="lower__left">
+            <p class="lead">
+              Titan helps you navigate equity decisions, liquidity events, and career transitions —
+              with a dedicated human advisor and a modern platform.
+            </p>
+          </div>
+          <div class="lower__right">
+            <div class="stat">
+              <div class="stat__label">Assets Under Management</div>
+              <div class="stat__value">$1.1B</div>
+              <div class="stat__note">
+                <span class="dot" aria-hidden="true">i</span>
+                <a href="#" class="disclosure">See Disclosures</a>
+              </div>
+            </div>
+            <div class="stat">
+              <div class="stat__label">All-in Advisory Fee</div>
+              <div class="stat__value">0.4%</div>
+            </div>
+            <div class="stat">
+              <div class="stat__label">Flat Fee</div>
+              <div class="stat__value">$0</div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
 </body>
 </html>
